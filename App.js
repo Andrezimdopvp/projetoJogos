@@ -9,6 +9,6 @@ import TelaDauntless from './screens/dauntless';
 
 export default function App() {
   return (
-   <TelaMinecraft/>
+   <TelaDauntless/>
   );
-}
+};
