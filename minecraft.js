@@ -6,10 +6,14 @@ import {
     TouchableOpacity,
     ImageBackground,
     Image,
+    Linking,
 } from 'react-native';
 
 const imgBackground = require('../assets/minecraft.jpg');
 
+const meuLink = () =>{
+    Linking.openURL('https://www.minecraft.net/pt-pt');
+}
 export default class TelaMinecraft extends Component{
     render(){
         return(
@@ -28,9 +32,10 @@ export default class TelaMinecraft extends Component{
                         <Text style={styles.MineText}>
                             Preço: R$148,25
                         </Text>
-                        <Text style={styles.MineText}>
+                        <TouchableOpacity style={styles.MineText}
+                        onPress={meuLink}>
                             Link para baixar: https://www.minecraft.net/pt-pt
-                        </Text>
+                        </TouchableOpacity>
                     </View>
                 
                     </View>

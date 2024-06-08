@@ -14,6 +14,7 @@ export default class TelaInicial extends Component{
         }
     }
     render(){
+        const { navigation } = this.props;
         return(
             <View style={styles.container}>
                 <View style={styles.title}>
@@ -22,22 +23,26 @@ export default class TelaInicial extends Component{
                     </Text>
                 </View>
                 <View style={styles.btn}>
-                    <TouchableOpacity style={styles.btnGameM}>
+                    <TouchableOpacity style={styles.btnGameM} 
+                    onPress={() => navigation.navigate('TelaMinecraft')}>
                         <Text style={styles.mineText}>
                             Minecraft
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnGameR}>
+                    <TouchableOpacity style={styles.btnGameR}
+                    onPress={() => navigation.navigate('TelaRoblox')}>
                         <Text style={styles.robloxText}>
                             Roblox
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnGameL}>
+                    <TouchableOpacity style={styles.btnGameL}
+                    onPress={() => navigation.navigate('TelaLethalCompany')}>
                         <Text style={styles.lethalText}>
                             Lethal Company
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.btnGameD}>
+                    <TouchableOpacity style={styles.btnGameD}
+                    onPress={() => navigation.navigate('TelaDauntless')}>
                         <Text style={styles.daunText}>
                             Dauntless
                         </Text>

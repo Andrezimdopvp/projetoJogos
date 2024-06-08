@@ -6,10 +6,14 @@ import {
     TouchableOpacity,
     ImageBackground,
     Image,
+    Linking,
 } from 'react-native';
 
-const imgBackground = require('../assets/roblox.jpeg');
+const imgBackground = require('../assets/roblox.jpg');
 
+const meuLink = () =>{
+    Linking.openURL('https://www.roblox.com/pt');
+}
 export default class TelaRoblox extends Component{
     render(){
         return(
@@ -28,9 +32,10 @@ export default class TelaRoblox extends Component{
                         <Text style={styles.RobloxText}>
                             Grátis
                         </Text>
-                        <Text style={styles.RobloxText}>
+                        <TouchableOpacity style={styles.RobloxText}
+                        onPress={meuLink}>
                             Link para baixar: https://www.roblox.com/pt
-                        </Text>
+                        </TouchableOpacity>
                     </View>
                 
                     </View>
@@ -48,7 +53,8 @@ const styles = StyleSheet.create({
     image:{
         flex:1,
         justifyContent: 'center',
-        width:'100%'
+        width:'100%',
+        height:'100%'
     },
     box:{
         flex:1,

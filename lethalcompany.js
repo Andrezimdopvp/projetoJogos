@@ -6,10 +6,14 @@ import {
     TouchableOpacity,
     ImageBackground,
     Image,
+    Linking,
 } from 'react-native';
 
-const imgBackground = require('../assets/lethalcompany.jpeg');
+const imgBackground = require('../assets/lethal.jpg');
 
+const meuLink = () =>{
+    Linking.openURL('https://store.steampowered.com/app/1966720/Lethal_Company/');
+}
 export default class TelaLethal extends Component{
     render(){
         return(
@@ -28,9 +32,10 @@ export default class TelaLethal extends Component{
                         <Text style={styles.LethalText}>
                             Preço: R$32,99
                         </Text>
-                        <Text style={styles.LethalText}>
+                        <TouchableOpacity style={styles.LethalText}
+                        onPress={meuLink}>
                             Link para baixar: https://store.steampowered.com/app/1966720/Lethal_Company/
-                        </Text>
+                        </TouchableOpacity>
                     </View>
                 
                     </View>
@@ -48,7 +53,8 @@ const styles = StyleSheet.create({
     image:{
         flex:1,
         justifyContent: 'center',
-        width:'100%'
+        width:'100%',
+        height:'100%'
     },
     box:{
         flex:1,
